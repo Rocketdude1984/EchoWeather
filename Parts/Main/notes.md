@@ -5,4 +5,4 @@
 * 1/16" thick silicone sheet cut to fit channel in top of box (see image below)
 * 1/16" thick acrylic sheet cut to fit viewing ports for light sensors (see image below)
 
-<img src="images/mainbox_setup.png" alt="Diagram" width="600"/>
+<img src="images/mainbox_setup.jpg" alt="Diagram" width="600"/>
