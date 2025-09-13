@@ -4,6 +4,8 @@
 2. Glue all parts together, unless screws or bolts are used, in this case use no glue.
 3. Use Silicone based adhesive to seal joints.
 
+ -- MOUNTING PVC PIPES, SCREWS, FINISH -- 
+
 Components:
 * (4) - M4x7 socket head bolts -- for holding bottom to enclosure
 * (7) - M4x5x5 heated threaded inserts -- 4, for bottom bolts, 3 for stevenson screen connection
