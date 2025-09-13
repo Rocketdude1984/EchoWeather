@@ -3,15 +3,20 @@
 1. Ensure there is enough glue to waterproof components.
 2. Glue all parts together, unless screws or bolts are used, in this case use no glue.
 3. Use Silicone based adhesive to seal joints.
-
- -- MOUNTING PVC PIPES, SCREWS, FINISH -- 
+4. Finish with bright white, satin spray paint.
 
 Components:
 * (4) - M4x7 socket head bolts -- for holding bottom to enclosure
 * (7) - M4x5x5 heated threaded inserts -- 4, for bottom bolts, 3 for stevenson screen connection
+* (2) - M6x12 socket head bolts -- for securing box to PVC pip mounts at both ends
+* (2) - M6 nuts
+* (2) - M2.5x6 pan head bolts -- for VEML7700
+* (2) - M2x4 socket head bolts -- for LTR390-UV
 * 1/16" thick silicone sheet cut to fit channel in top of box (see image below)
 * 1/16" thick acrylic sheet cut to fit viewing ports for light sensors (see image below)
 * (2) - 18650 battery holders
+* 1.5" OD PVC pipe (about 10" long)
+* 1.5" 90° elbow fitting -- if mounting on a vertical surface
 
 *See electrical (WIP) for electrical components in main box.*
 
