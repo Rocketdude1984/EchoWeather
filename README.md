@@ -12,7 +12,7 @@ A personal project to design, build, and program a working weather station that 
 * UV Light
 * Rain
 
-## Components
+## Sensors and Components
 1. XIAO ESP32C3: https://www.amazon.com/dp/B0DGX3LSC7?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 2. BME280 breakout module: https://www.amazon.com/dp/B0DHPCFJD6?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 3. AS5600 Magnetic Encoder: https://www.amazon.com/dp/B094F8H591?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
@@ -31,7 +31,7 @@ The weather station will be built in 4 modules.
 Each module will be connected together to the main module where all collected data will be sent to the cloud.
 
 ## Power
-The station will be powered by a single 18650 (if more capacity is needed, 2 in parallel will be used later). To keep the battery charged, the station will have a built in 6V3W solar panel that charges the battery through a TP4056 charging module.
+The station will be powered by two 18650s in parallel. To keep the battery charged, the station will have a built in 6V3W solar panel that charges the battery through a TP4056 charging module.
 
 ## Materials
 Most of the station is printed with PETG which should be able to withstand fairly high outdoor temperatures and resist fading or cracking. 1" PVC pipe is used for the main support to hold each module of the station. For extra UV protection a few coats of white spray paint will be used.
