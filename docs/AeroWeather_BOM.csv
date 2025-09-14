@@ -14,6 +14,7 @@ TP4056,6,$9.11,$1.52,0.2,5,Charging and Boost Converter
 1inOD PVC pipe,1,$5.41,$5.41,0,0,Mast
 1inOD PVC 90,1,$1.48,$1.48,0,0,Elbow
 Krylon Spray Paint,3,$7.98,$2.66,0,0,UV protection 
-18650 Battery Holder,5,$5.98,$1.20,0,0,Holds the single 18650 cell
+18650 Battery Holder,5,$5.98,$2.40,0,0,Holds the 18650 cells
 18650 Cells,6,$23.99,$4.00,0,3.7,Powers the station
-,Total Cost,$167.69,$87.11,,,
+,Total Cost,$167.69,$88.31,,,
+
