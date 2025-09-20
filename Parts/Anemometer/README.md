@@ -7,9 +7,9 @@ Download the following parts from the original project by [wt29](https://github.
 - [AnemometerRotorCap.stl](https://github.com/wt29/Anemometer/blob/main/stl/AnemometerRotorCap.stl)
 - [windCup.stl](https://github.com/wt29/Anemometer/blob/main/stl/windCup.stl)
 
-These parts did need some minor modification by filing, drilling, and sanding, but they did work
+These parts did need some minor modification by filing, drilling, and sanding, but they did work.
 
-The EchoWeather_AnemometerEnclosure was used just as an adapter to make WT29's parts with this projects support rod.
+The EchoWeather_AnemometerEnclosure was used just as an adapter to make wt29's parts with this project's support rod.
 
 ## Construction
 1. Print 3 total wind cups
