@@ -1,7 +1,7 @@
 # Notes
 
 REQUIRED FILES FOR ANEMOMETER
-Download the following parts from the original project by [wt29](https://github.com/wt29):
+Download the following parts from the anemometer project by [wt29](https://github.com/wt29):
 - [AnemometerBaseCap.stl](https://github.com/wt29/Anemometer/blob/main/stl/AnemometerBaseCap.stl)
 - [AnemometerRotor.stl](https://github.com/wt29/Anemometer/blob/main/stl/AnemometerRotor.stl)
 - [AnemometerRotorCap.stl](https://github.com/wt29/Anemometer/blob/main/stl/AnemometerRotorCap.stl)
