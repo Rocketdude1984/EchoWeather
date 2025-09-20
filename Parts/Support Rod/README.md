@@ -4,6 +4,6 @@
 3. Using glue to fasten the two support rod halves together and then the rod to the inner clamp.
 4. The Outer clamp is held in with bolts and nuts.
 
-#Components
+# Components
 * (2) - M6x25 socket head bolts
 * (2) - M6 nuts
