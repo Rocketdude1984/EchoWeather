@@ -4,6 +4,7 @@
 2. Glue all parts together, unless screws or bolts are used, in this case use no glue.
 3. Use Silicone based adhesive to seal joints.
 4. Finish with bright white, satin spray paint.
+5. Glue milk carton squares to cover UV and Lux sensor.
 
 Components:
 * (4) - M4x7 socket head bolts -- for holding bottom to enclosure
@@ -17,6 +18,7 @@ Components:
 * (2) - 18650 battery holders
 * 1.5" OD PVC pipe (about 10" long)
 * 1.5" 90° elbow fitting -- if mounting on a vertical surface
+* About 3/4" square pieces of cut plastic milk gallon (to act as light diffuser for ambient light sensor and UV sensor).
 
 *See electrical (WIP) for electrical components in main box.*
 
