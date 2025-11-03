@@ -24,6 +24,16 @@ Components:
 
 <img src="/docs/images/mainbox_setup.jpg" alt="Diagram" width="600"/>
 
+fig. 1 - waterproofing measures for Main Box
+
+<img src="/docs/images/Labels.jpg" alt="Diagram" width="400" rotate="90"/>
+
+fig. 2 - Layout of components in Main Box
+
+<img src="/docs/images/ChargingandMControllerLocations.jpg" alt="Diagram" width="400"/>
+
+fig. 3 - Location of Charging module and Microcontroller
+
 ## Stevenson Screen:
 1. Print (4) total Rings for the stevenson screen (There is only one ring .stl file because they're of course identical)
 2. Glue mounting plate for BME280 to top of stevenson screen (this is the only component for the screen that needs glue).
@@ -33,6 +43,4 @@ Components:
 * M3x8 socket head bolt -- for mounting BME280
 * M3 nut
 * 1-3/4" x 1-5/16" sink strainer washer
-
-
 
