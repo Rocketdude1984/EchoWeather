@@ -35,3 +35,10 @@ The station will be powered by two 18650s in parallel. To keep the battery charg
 
 ## Materials
 Most of the station is printed with PETG which should be able to withstand fairly high outdoor temperatures and resist fading or cracking. 1" PVC pipe is used for the main support to hold each module of the station. For extra UV protection a few coats of white spray paint will be used.
+
+## Code
+Download full code folder and make sure to replace the credentials in cred.h with your own information for WiFi and google sheet connectivity. Read this article for getting IDs and keys for the credentials: [https://randomnerdtutorials.com/esp32-datalogging-google-sheets/].
+
+## App
+The app was designed in MIT App Inventor and I have included the .aia file that you can import into App Inventor and configure to your project. (the only required configuration is the URL to your app script for sheets, re: docs/Google_sheet_setup).
+
