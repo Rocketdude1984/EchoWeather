@@ -44,3 +44,6 @@ Download full code folder and make sure to replace the credentials in cred.h wit
 ## App
 The app was designed in MIT App Inventor and I have included the .aia file that you can import into App Inventor and configure to your project. (the only required configuration is the URL to your app script for sheets, re: docs/Google_sheet_setup).
 
+## Calibration (WIP)
+I am still in the process of calibrating the sensor, some values make little sense such as the UV levels. After enough data is collected I will upload a new arduino sketch with the updated calibration values. 
+
