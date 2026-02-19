@@ -1,4 +1,4 @@
-# EchoWeather: DIY weather station and app (WIP)
+# EchoWeather: DIY weather station and app
 A personal project to design, build, and program a working weather station that connects to a database and smart phone app. Collected data will then be used to train an AI model that will predict future weather variables.
 
 <img src="docs/images/EchoWeatherCompleteBottom.jpg" alt="Diagram" width="600"/>
@@ -44,6 +44,6 @@ Download full code folder and make sure to replace the credentials in cred.h wit
 ## App
 The app was designed in MIT App Inventor and I have included the .aia file that you can import into App Inventor and configure to your project. (the only required configuration is the URL to your app script for sheets, re: docs/Google_sheet_setup).
 
-## Calibration (WIP)
-I am still in the process of calibrating the sensor, some values make little sense such as the UV levels. After enough data is collected I will upload a new arduino sketch with the updated calibration values. 
+## Calibration 
+After allowing the system to run for a few months I compared known weather data from reliable sources with the data gathered from the station. Most values were close to the true ones, but I did calculate some scaling factors for the station. See the Calibration and changes page under docs.
 
