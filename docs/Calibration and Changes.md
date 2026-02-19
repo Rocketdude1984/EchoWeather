@@ -45,7 +45,7 @@ Instead this time I went with a more robost charging system. An actual solar cha
 Solar Power Manager 5V, JEITA Li-ion Battery Charger Module with Dual USB & 5V/3.3V Output, for Solar Panel Charging
 [Solar Charging Board - AmazonUS](https://www.amazon.com/dp/B0FQP915R9?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_2)
 
-![Solar Charging Board Image](/docs/images/solarcharger.jpg)
+<img src="images/SolarCharging Board.jpg" alt="Diagram" width="500"/>
 
 This board was far superior to the simple TP4056. It had much more protection (Thermal, overdischarge, under voltage, etc) it had a better built-in converter and the setup was much simpler. I wish I would have used it from the start.
 
