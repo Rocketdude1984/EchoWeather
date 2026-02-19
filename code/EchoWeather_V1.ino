@@ -3,7 +3,7 @@
 #include <Adafruit_BME280.h>
 #include "Adafruit_VEML7700.h"
 #include "LTR390.h"
-#include <esp_sleep.h>
+//#include <esp_sleep.h>
 #include "WiFi.h"
 #include "Creds.h"
 #include "time.h"
@@ -45,21 +45,25 @@ Adafruit_VEML7700 veml = Adafruit_VEML7700();
 UDOUBLE UV,ALS;
 
 // Calibration Factors
+float UVscale = 0.0285;
+float lightScale1 = 1.8;
+float lightScale2 = 7;
 float tempScale = 1;
 float tempOff = 0;
-float presScale = 1;
+float presScale = 1.003;
 float presOff = 0;
 float humidScale = 1;
 float humidOff = 0;
 int directionOffset = -270; //degree offset
+
 volatile unsigned long windCount = 0;
 volatile unsigned long rainCount = 0;
 
 unsigned long startTime = millis();
 unsigned long windPulseTime = millis();
 unsigned long windElapsedPulse = 0;
-unsigned long measureTime = 291; // Time in Seconds 291
-unsigned long wakeUpInterval = 300; // Time in Seconds
+unsigned long measureTime = 591; // Time in Seconds 591(10 mins, extra delay for WiFi connection) -----------------------------------<<<<<<
+//unsigned long restTime = 20; // Time in Seconds
 
 float gustWindSpeed = 0;
 float maxGust = 0;
@@ -85,13 +89,13 @@ void setup() {
   Serial.begin(115200);
 
   delay(500);
-  Serial.print("Wake Interval: ");
-  Serial.print(wakeUpInterval);
-  Serial.print("s, ");
+  //Serial.print("Wake Interval: ");
+  //Serial.print(restTime);
+  //Serial.print("s, ");
   Serial.print("Measure Interval: ");
   Serial.print(measureTime);
   Serial.println("s");
-  esp_sleep_enable_timer_wakeup(wakeUpInterval * 1000000); // wake every 30 sec
+  //esp_sleep_enable_timer_wakeup(wakeUpInterval * 1000000);
   Wire.begin();
 
 // Wind Direction Setup
@@ -172,7 +176,7 @@ if (ready){
     float pressure = bme.readPressure() / 100.0F * presScale + presOff;
     float humidity = bme.readHumidity() * humidScale + humidOff;
     int lightLevel = GetLuxLevel();
-    int UV = LTR390_UVS();
+    int UV = LTR390_UVS()*UVscale;
     float windSpeed = (float(windCount)/float(measureTime))*1.66;
     float rainRate = float(rainCount)/float(measureTime)*99.216;
     float batteryVoltage = GetBatteryVoltage();
@@ -252,23 +256,30 @@ if (ready){
 
     delay(5000);
 
-    // go to deep sleep mode
+    // go to deep sleep mode ------------------<<<<<<<<<<<<<<
     WiFi.setSleep(true); 
-    Serial.println("Going to sleep now");
+    Serial.println(WiFi.status());
     Serial.println("");
-    Serial.flush();
-    esp_deep_sleep_start();
+    ESP.restart();
+    //Serial.flush();
+    //esp_deep_sleep_start();
   }
 }
 
 //Battery Voltage Level
 float GetBatteryVoltage(){
-  return map(analogRead(batteryPin),0,2715.0,0,391.0)/100.0;
+  return analogReadMilliVolts(2)*0.00147;
+  //return map(analogRead(batteryPin),0,2715.0,0,391.0)/100.0;
 }
 
 //Light Levels
 int GetLuxLevel(){
   int lux = veml.readLux();
+  if (lux > 15000){
+    lux = lux * lightScale2;
+  } else {
+    lux = lux * lightScale1;
+  }
   delay(500);
   return lux;
 }
