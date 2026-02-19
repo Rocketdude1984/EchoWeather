@@ -50,3 +50,8 @@ Solar Power Manager 5V, JEITA Li-ion Battery Charger Module with Dual USB & 5V/3
 This board was far superior to the simple TP4056. It had much more protection (Thermal, overdischarge, under voltage, etc) it had a better built-in converter and the setup was much simpler. I wish I would have used it from the start.
 
 So far this new charging board has worked perfectly for over 2 months and has never let the batteries dip below 3 volts even on several cloudy days (about 5 days straight of overcast at one time).
+
+### Code Changes
+After this testing I determined that because of using the 2, 18650s cells the station had enough capacity to run with 10 minute measuring intervals for wind and rain, instead of 5min measuring and 5min sleeping. This change improved the acccuracy of the wind speed, wind gust, and rain rates for the station.
+
+This change also makes the controller reset for every measuring period to hopefully elimanate any chance of it becoming stuck in a connection loop like last time.
