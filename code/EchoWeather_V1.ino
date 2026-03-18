@@ -127,7 +127,6 @@ void setup() {
   // veml Setup
   if (!veml.begin()) {
     Serial.println("Sensor not found");
-    while (1);
   }
 
   veml.setGain(VEML7700_GAIN_1_8);      // 1/8
@@ -166,8 +165,9 @@ if (!connected){
   }
   connected = ConnectToSheets();
 }
-
+if (!connected) return;
   bool ready = GSheet.ready();
+
 if (ready){
   // Get sensor values
     int windDegree = GetWindDegree();
@@ -329,10 +329,18 @@ bool ConnectToSheets(){
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
   Serial.print("Connecting to Wi-Fi");
-  while (WiFi.status() != WL_CONNECTED) {
+  int attempts = 0;
+  while (WiFi.status() != WL_CONNECTED && attempts < 15) {
     Serial.print(".");
     delay(1000);
+    attempts++;
   }
+
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.println("\nWiFi Failed. Continuing offline...");
+    return false;
+  }
+
   Serial.println();
   Serial.print("Connected with IP: ");
   Serial.println(WiFi.localIP());
@@ -351,9 +359,15 @@ bool ConnectToSheets(){
 
 // gives status of google sheet connetions
 void tokenStatusCallback(TokenInfo info){
+  
     if (info.status == token_status_error){
         GSheet.printf("Token info: type = %s, status = %s\n", GSheet.getTokenType(info).c_str(), GSheet.getTokenStatus(info).c_str());
         GSheet.printf("Token error: %s\n", GSheet.getTokenError(info).c_str());
+        delay(10000);
+        WiFi.setSleep(true); 
+        Serial.println(WiFi.status());
+        Serial.println("");
+        ESP.restart();
     }
     else{
         GSheet.printf("Token info: type = %s, status = %s\n", GSheet.getTokenType(info).c_str(), GSheet.getTokenStatus(info).c_str());
