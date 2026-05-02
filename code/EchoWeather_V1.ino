@@ -13,7 +13,7 @@
 
 // Wind, rain, and battery pin definitions
 #define windPin 10
-#define rainPin 6
+#define rainPin 21
 #define batteryPin 2
 
 // Token Callback function
